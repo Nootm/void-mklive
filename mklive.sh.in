@@ -214,8 +214,6 @@ generate_grub_efi_boot() {
     mkdir -p "$GRUB_DIR"/fonts
     cp -f "$GRUB_DATADIR"/unicode.pf2 "$GRUB_DIR"/fonts
 
-    modprobe -q loop || :
-
     # Create EFI vfat image.
     truncate -s 32M "$GRUB_DIR"/efiboot.img >/dev/null 2>&1
     mkfs.vfat -F12 -S 512 -n "grub_uefi" "$GRUB_DIR/efiboot.img" >/dev/null 2>&1
