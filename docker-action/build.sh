@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-xbps-install -S
-xbps-install -u xbps
+xbps-install -Sy xbps
+xbps-install -Syu
 xbps-install -Syu
