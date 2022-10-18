@@ -5,5 +5,6 @@ xbps-install -Syu
 xbps-install -Syu
 xbps-install -Sy make git bash
 git clone https://github.com/Nootm/void-mklive.git
+cd void-mklive
 ./mklive.sh -o x.iso -a x86_64-musl -l en_GB.UTF-8 -i gzip -s gzip -C "ipv6.disable=1"
 cp ./x.iso /github/workspace/
